@@ -4,10 +4,10 @@
    ==================================================== */
 :root {
     /* Cores */
-    --color-bordeaux: #690000;         /* Bordeaux Principal da Referência */
-    --color-bordeaux-dark: #3A0000;    /* Bordeaux Escuro para Degradês */
-    --color-gold: #FAEABC;             /* Bege Dourado Ouro da Referência */
-    --color-bg-light: #F9F5F0;         /* Bege Off-white de fundo de seção clara */
+    --color-bordeaux: #4F112A;         /* Nova cor Bordeaux */
+    --color-bordeaux-dark: #1E0008;    /* Nova cor de detalhes/Bordeaux escuro */
+    --color-gold: #FAEABC;             
+    --color-bg-light: #F5EAAA;         /* Nova cor para os fundos Bege */
     --color-bg-white: #FFFFFF;
     --color-text-dark: #201f1f;
     --color-text-light: #FFFFFF;
