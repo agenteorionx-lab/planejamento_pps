@@ -1512,12 +1512,12 @@ div[data-name="Alex Finizola"] .speaker-img {
 /* Tagline em Destaque na Seção de Oferta */
 .impact-tagline-box {
     display: inline-block;
-    background: linear-gradient(135deg, rgba(105, 0, 0, 0.4) 0%, rgba(58, 0, 0, 0.6) 100%);
-    border: 1px solid rgba(255, 51, 51, 0.5);
+    background: linear-gradient(135deg, rgba(133, 120, 97, 0.3) 0%, rgba(231, 212, 187, 0.15) 100%);
+    border: 1px solid var(--color-accent-almond);
     border-radius: 30px;
     padding: 10px 24px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(105, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .impact-tagline-text {
@@ -1526,7 +1526,6 @@ div[data-name="Alex Finizola"] .speaker-img {
     font-weight: 700;
     color: #FF3333;
     letter-spacing: 0.02em;
-    text-shadow: 0 2px 8px rgba(255, 51, 51, 0.3);
 }
 
 @media (max-width: 768px) {
