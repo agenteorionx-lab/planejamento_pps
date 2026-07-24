@@ -1468,3 +1468,74 @@ div[data-name="Alex Finizola"] .speaker-img {
         font-size: 2.2rem;
     }
 }
+
+/* ====================================================
+   Banners de Impacto (Frase de Destaque PPS Business)
+   ==================================================== */
+.impact-banner-section {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(29, 29, 22, 0.8) 0%, rgba(41, 40, 30, 0.9) 100%);
+    border-top: 1px solid var(--color-accent-sand);
+    border-bottom: 1px solid var(--color-accent-sand);
+}
+
+.impact-banner-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background: radial-gradient(circle at center, rgba(133, 120, 97, 0.15) 0%, rgba(35, 34, 25, 0.9) 100%);
+    border: 1px solid var(--color-accent-sand);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(231, 212, 187, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-quote-icon {
+    font-size: 2.5rem;
+    color: var(--color-accent-sand);
+    margin-bottom: 10px;
+    display: block;
+    opacity: 0.8;
+}
+
+.impact-banner-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem !important;
+    color: var(--color-accent-almond);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Tagline em Destaque na Seção de Oferta */
+.impact-tagline-box {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(133, 120, 97, 0.3) 0%, rgba(231, 212, 187, 0.15) 100%);
+    border: 1px solid var(--color-accent-almond);
+    border-radius: 30px;
+    padding: 10px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.impact-tagline-text {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-almond);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .impact-banner-title {
+        font-size: 1.6rem !important;
+    }
+    .impact-banner-box {
+        padding: 24px 20px;
+    }
+    .impact-tagline-text {
+        font-size: 1.05rem;
+    }
+}

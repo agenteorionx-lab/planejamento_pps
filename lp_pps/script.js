@@ -76,10 +76,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 4. Contador Regressivo até 23:59 de 30/07
+    // 4. Contador Regressivo & Links de Checkout Automatizados
     // ==========================================
-    // O ano corrente local verificado do sistema é 2026. Target: 2026-07-30T23:59:59
+    // Links de Checkout (Altere o EXPIRED_CHECKOUT_URL para o link do novo lote/preço cheio quando necessário)
+    const PRIMARY_CHECKOUT_URL = 'https://checkout.bravvius.com/17753885';
+    const EXPIRED_CHECKOUT_URL = 'https://checkout.bravvius.com/26288547'; // 2º link acionado automaticamente após o encerramento do tempo
+
+    // Alvo do cronômetro: 30/07 às 23:59:59 (Ano 2026)
     const countdownDate = new Date('2026-07-30T23:59:59').getTime();
+
+    const updateCheckoutButtons = (url) => {
+        if (!url) return;
+        const checkoutBtns = document.querySelectorAll('.checkout-btn, #main-checkout-btn');
+        checkoutBtns.forEach(btn => {
+            if (btn.getAttribute('href') !== url) {
+                btn.setAttribute('href', url);
+            }
+        });
+    };
 
     const updateCountdown = () => {
         const daysEl = document.getElementById('days');
@@ -92,13 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date().getTime();
         const distance = countdownDate - now;
 
-        if (distance < 0) {
+        if (distance <= 0) {
             daysEl.textContent = '00';
             hoursEl.textContent = '00';
             minutesEl.textContent = '00';
             secondsEl.textContent = '00';
+            
+            // Troca automática para o segundo link de checkout quando o tempo encerra
+            if (EXPIRED_CHECKOUT_URL && EXPIRED_CHECKOUT_URL.trim() !== '') {
+                updateCheckoutButtons(EXPIRED_CHECKOUT_URL);
+            }
             return;
         }
+
+        // Garante o link primário enquanto a oferta estiver ativa
+        updateCheckoutButtons(PRIMARY_CHECKOUT_URL);
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
